@@ -6,57 +6,14 @@ import userData from "@constants/data";
 export default function Hero() {
   const colors = ["#F59E0B", "#84CC16", "#10B981", "#3B82F6"];
   return (
-    <div className="flex flex-row justify-center items-start overflow-hidden">
-      {/* Text container */}
-
-      <div className="w-full md:w-1/2 mx-auto text-center md:text-left lg:p-20">
-        <RoughNotationGroup show={true}>
-          <RainbowHighlight color={colors[0]}>
-            <h1 className="text-4xl md:text-8xl font-bold text-gray-700 dark:text-gray-200 my-2">
-              Developer.
-            </h1>
-          </RainbowHighlight>
-          <RainbowHighlight color={colors[1]}>
-            <h1 className="text-4xl md:text-8xl font-bold text-gray-700 dark:text-gray-200 my-2">
-              Designer.
-            </h1>
-          </RainbowHighlight>
-          <RainbowHighlight color={colors[2]}>
-            <h1 className="text-4xl md:text-8xl font-bold text-gray-700 dark:text-gray-200 my-2">
-              Programmer.
-            </h1>
-          </RainbowHighlight>
-          <RainbowHighlight color={colors[3]}>
-            <h1 className="text-4xl md:text-8xl font-bold text-gray-700 dark:text-gray-200 my-2">
-              Youtuber.
-            </h1>
-          </RainbowHighlight>
-        </RoughNotationGroup>
-      </div>
-      {/* Image container */}
-      <div className="hidden lg:block relative w-full md:w-1/2 -mr-40 mt-20">
-        <div className="w-3/4 ">
-          <img src={userData.avatarUrl} alt="avatar" className=" shadow" />
-          <div className="flex flex-row justify-between mt-4">
-            <div className="flex flex-row space-x-4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                className="bi bi-arrow-90deg-up"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M4.854 1.146a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L4 2.707V12.5A2.5 2.5 0 0 0 6.5 15h8a.5.5 0 0 0 0-1h-8A1.5 1.5 0 0 1 5 12.5V2.707l3.146 3.147a.5.5 0 1 0 .708-.708l-4-4z"
-                />
-              </svg>
-              <p className="font-mono">That's me</p>
-            </div>
-          </div>
+    <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+        <div class="mr-auto place-self-center lg:col-span-7">
+            <h1 class="max-w-2xl mb-4 text-center text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">Olá, sou o Macir, engenheiro de software full-stack.</h1>
+            <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">Fique a vontade e veja o que estive fazendo. Vamos descobrir o que podemos construir juntos!</p>
         </div>
-      </div>
+        <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
+            <img src={userData.avatarUrl} alt="Macir" className='rounded-full max-w-full h-96 align-middle'/>
+        </div>                
     </div>
   );
 }
